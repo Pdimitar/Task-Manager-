@@ -1,0 +1,70 @@
+﻿<div class="container">
+    <div>
+        <h3>Tasks</h3>
+        <br />
+    </div>
+
+    <form>
+        <input type="text" class="form-control" placeholder="Task Name" ng-model="addTask.name">
+        <br />
+
+        <input type="button" class="btn btn-info col-md-offset-5" value="Add Task" ng-click="AddTask()" />
+    </form>
+    <br />
+    <div class="row">
+        <div class="col-md-3">
+            To Do
+            <ul ng-repeat="task in listOfTasks" ui-on-Drop="onDrop(task.id, task.name, 0 ,task.projectId)" class="ul">
+                <li ui-draggable="true">
+                    <p ng-show="task.taskStates===0">
+                        {{task.name}}
+                    </p>
+
+                </li>
+            </ul>
+        </div>
+
+        <div class="col-md-3">
+            In Progress
+            <ul ng-repeat="task in listOfTasks" ui-on-Drop="onDrop(task.id, task.name, 1 ,task.projectId)" class="ul">
+                <li ui-draggable="true" drag="inProgres">
+                    <p ng-show="task.taskStates===1">
+                        {{task.name}}
+                    </p>
+
+                </li>
+            </ul>
+        </div>
+
+        <div class="col-md-3">
+            Testing
+            <ul ng-repeat="task in listOfTasks" ui-on-Drop="onDrop(task.id, task.name, 2 ,task.projectId)" class="ul">
+                <li ui-draggable="true">
+                    <p ng-show="task.taskStates===2">
+                        {{task.name}}
+                    </p>
+                </li>
+            </ul>
+        </div>
+
+        <div class="col-md-3">
+            Complited
+            <ul  ng-repeat="task in listOfTasks" drop-validate="isTeset()" ui-on-Drop="onDrop(task.id, task.name, 3 ,task.projectId)" class="ul">
+                <li ui-draggable="true">
+                    <p ng-show="task.taskStates===3">
+                        {{task.name}}
+                    </p>
+                </li>
+            </ul>
+        </div>
+        <br />
+        <br />
+        <div class="row">
+            <div class="col-md-1" ng-repeat="task in listOfTasks">
+                <div ui-on-Drop="deleteTask(task.id)">
+                    <img class="image" src="../../Content/delete.png" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

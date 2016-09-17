@@ -1,0 +1,38 @@
+﻿<div ng-if="ngUnaprived == 'false'">
+    <h2>Add Project</h2>
+
+    <form>
+        <input type="text" class="form-control" placeholder="Project Name" ng-model="addProject.projectName" required>
+        <br />
+        <input type="text" class="form-control" placeholder="Description" ng-model="addProject.description">
+        <br />
+        <input type="text" data-ng-model="date3" datetime-picker hour="23" minute='59' placeholder="StartDate" class="form-control" required />
+        <br />
+        <input type="text" data-ng-model="date4" datetime-picker hour="23" minute='59' placeholder="EndDate" class="form-control" required />
+
+
+        <br />
+        <input type="submit" class="btn btn-info col-md-offset-5" value="Add Project" data-ng-click="AddProject(date3,date4)" />
+    </form>
+    <br />
+
+
+    <div class="row">
+        <div class="col-sm-3 padding" ng-repeat="project in getProject">
+            <div class="card card-block cards">
+                <h3 class="card-title">{{project.projectName}}</h3>
+                <p class="card-text">{{project.description}}</p>
+                <p>Start Date:</p>
+                <p class="card-text">{{project.startDate | date:'medium'}}</p>
+                <p>End Date:</p>
+                <p class="card-text">{{project.endDate | date:'medium'}}</p>
+                <a href="/#/getTasks/{{project.id}}" ng-click="tasks(project.id)">Tasks</a>
+                <a href="/#/addProject" ng-click="deleteProject(project.id)">Delete</a>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div ng-if="ngUnaprived == 'true'">
+    <h2>You Are Not Approved By the Admin</h2>
+</div>

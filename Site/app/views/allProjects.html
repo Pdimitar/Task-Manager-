@@ -1,0 +1,23 @@
+﻿
+<table class="table table-striped" style="font-size:18px">
+    <tr>
+        <td><b>Project Name</b></td>
+        <td><b>Description</b></td>
+        <td><b>Start Date</b></td>
+        <td><b>End Date</b></td>
+        <td><b>Tasks</b></td>
+
+        <td> </td>
+
+    </tr>
+    asjfkhwgfjbjsdgflhewjkwqehjrjbkewrwebjbghwg
+    <tr ng-repeat="task in allProject">
+        <td>{{task.projectName}}</td>
+        <td>{{task.description}}</td>
+        <td>{{task.startDate}}</td>
+        <td>{{task.endDate}}</td>
+        <td ng-repeat="taskName in task.tasks">
+            {{taskName.name}}
+        </td>
+    </tr>
+</table>

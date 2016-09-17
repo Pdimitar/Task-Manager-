@@ -1,0 +1,32 @@
+﻿<h3>Un Approved Users</h3>
+<table class="table table-striped" style="font-size:18px">
+    <tr>
+        <td><b>User Name</b></td>
+        <td><b>Email</b></td>
+
+
+        <td> </td>
+
+    </tr>
+
+    <tr ng-repeat="user in AllUnApprovedUsers" ng-if="user.lockoutEnabled == true">
+        <td>{{user.userName}}</td>
+        <td>{{user.email}}</td>
+        <td><input type="button" value="Activate" class="btn btn-info btn-xs" ng-click="adtivateUser(user.id)" /></td>
+    </tr>
+</table>
+<br />
+<h3>Approved Users</h3>
+<table class="table table-striped" style="font-size:18px">
+    <tr>
+        <td><b>User Name</b></td>
+        <td><b>Email</b></td>
+        <td> </td>
+    </tr>
+
+    <tr ng-repeat="user in AllUnApprovedUsers" ng-if="user.lockoutEnabled == false">
+        <td>{{user.userName}}</td>
+        <td>{{user.email}}</td>
+        <td><input type="button" value="Suspend" class="btn btn-info btn-xs" ng-click="desctivateUser(user.id)" /></td>
+    </tr>
+</table>

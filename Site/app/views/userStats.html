@@ -1,0 +1,47 @@
+﻿<div ng-if="ngUnaprived == 'false'">
+    <table class="table table-striped" style="font-size:18px">
+        <tr>
+            <td><b>To Do</b></td>
+        </tr>
+        <tr ng-repeat="task in Todo">
+            <td>{{task.name}}</td>
+
+        </tr>
+    </table>
+
+    <table class="table table-striped" style="font-size:18px">
+        <tr>
+            <td><b>In Progress</b></td>
+        </tr>
+
+        <tr ng-repeat="task in inProgres">
+            <td>{{task.name}}</td>
+
+        </tr>
+    </table>
+
+
+    <table class="table table-striped" style="font-size:18px">
+        <tr>
+            <td><b>Testing</b></td>
+        </tr>
+        <tr ng-repeat="task in testing">
+            <td>{{task.name}}</td>
+
+        </tr>
+    </table>
+
+
+    <table class="table table-striped" style="font-size:18px">
+        <tr>
+            <td><b>Complited</b></td>
+        </tr>
+        <tr ng-repeat="task in complited">
+            <td>{{task.name}}</td>
+        </tr>
+    </table>
+</div>
+<div ng-if="ngUnaprived == 'true'">
+    <h2>You Are Not Approved By the Admin</h2>
+</div>
+

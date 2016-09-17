@@ -1,0 +1,7 @@
+c:\users\lenovo g50\documents\visual studio 2015\Projects\TaskMenager\Models\bin\Debug\Models.dll
+c:\users\lenovo g50\documents\visual studio 2015\Projects\TaskMenager\Models\bin\Debug\Models.pdb
+c:\users\lenovo g50\documents\visual studio 2015\Projects\TaskMenager\Models\obj\Debug\Models.csprojResolveAssemblyReference.cache
+c:\users\lenovo g50\documents\visual studio 2015\Projects\TaskMenager\Models\obj\Debug\Models.dll
+c:\users\lenovo g50\documents\visual studio 2015\Projects\TaskMenager\Models\obj\Debug\Models.pdb
+C:\Users\Lenovo G50\Documents\Visual Studio 2015\Projects\TaskMenager\Models\bin\Debug\Common.dll
+C:\Users\Lenovo G50\Documents\Visual Studio 2015\Projects\TaskMenager\Models\bin\Debug\Common.pdb
