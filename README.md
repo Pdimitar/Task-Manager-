@@ -1,2 +1,2 @@
 # Task-Manager-
-Simple App to magege you tasks
+Simple App to manage you tasks
